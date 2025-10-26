@@ -53,7 +53,7 @@ export default function Navigation() {
             className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
             onClick={() => scrollToSection("#home")}
           >
-            SangWoo's Log
+            SangWoo&apos;s Log
           </motion.div>
 
           {/* 데스크톱 메뉴 */}
