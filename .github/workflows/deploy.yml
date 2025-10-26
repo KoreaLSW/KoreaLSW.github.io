@@ -10,10 +10,12 @@ permissions:
   id-token: write
 
 jobs:
+  # 빌드 작업
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,8 +28,7 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: ""
+        # env: NEXT_PUBLIC_BASE_PATH: "" <-- 이 줄은 필요 없습니다.
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -35,8 +36,25 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out # next build가 생성하는 out 폴더
 
+  # 배포 작업 (build 작업과 분리됨)
+  deploy:
+    # build 작업이 성공해야만 실행됨
+    needs: build
+
+    # 배포 작업에 필요한 권한
+    permissions:
+      pages: write
+      id-token: write
+
+    # 배포 환경 설정
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
