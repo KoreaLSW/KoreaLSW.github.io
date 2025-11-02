@@ -120,18 +120,30 @@ export default function Hero() {
               <div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   개발자의 꿈을 시작하게 된 계기는 웹페이지를 만드는 것에 흥미를
-                  느끼게 되었고, 온라인 강의를 통해 학습하며 다양한 작은
+                  느끼게 되었고, 온라인 강의와 스터디를 통해 학습하며 다양한
                   프로젝트들을 만들어보았습니다.
                 </p>
+
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  OpenAPI를 활용한 데이터 활용, 클라이언트-서버 통신 이해,
-                  Express와 MySQL을 사용한 REST API 서버 구축 경험을 쌓았습니다.
-                  특히 <strong className="text-foreground">공유일기</strong>{" "}
-                  프로젝트를 통해 React와의 통신을 구현했습니다.
+                  Express.js와 MySQL 기반 REST API 서버 구축 경험을 바탕으로,
+                  <strong className="text-foreground"> SocialSpace</strong>{" "}
+                  프로젝트를 통해 Next.js와 Express.js를 활용한 풀스택 개발
+                  역량을 확장했습니다.
                 </p>
+
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  초기 로딩 속도 개선을 위해 SSR을 도입하고, SWR 캐싱과 낙관적
+                  UI 업데이트로 사용자 경험을 개선했으며, Socket.IO를 활용한
+                  실시간 채팅 시스템을 구현했습니다. PostgreSQL 기반
+                  데이터베이스 설계와 N+1 쿼리 최적화를 통해 성능 문제를
+                  해결하며 실제 비즈니스 요구사항을 만족시키는 시스템을
+                  구축했습니다.
+                </p>
+
                 <p className="text-muted-foreground leading-relaxed">
-                  빠르게 변화하는 트렌드에 적응하며 지속적인 학습을 통해
-                  인정받는 개발자가 되고자 합니다.{" "}
+                  빠르게 변화하는 웹 기술 트렌드에 적응하며 지속적인 학습을 통해
+                  문제를 해결하고 비즈니스 가치를 창출하는 개발자가 되고자
+                  합니다.{" "}
                   <span className="text-green-600 dark:text-green-400">🙌</span>
                 </p>
               </div>
