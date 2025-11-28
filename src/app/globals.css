@@ -141,7 +141,16 @@ body {
 
 .markdown-content p {
   margin: 1rem 0;
-  color: var(--muted-foreground);
+  color: #000000;
+}
+
+.dark .markdown-content p {
+  color: #ffffff;
+}
+
+.markdown-content p strong {
+  font-weight: 700 !important;
+  color: var(--foreground) !important;
 }
 
 .markdown-content ul {
@@ -158,13 +167,54 @@ body {
 
 .markdown-content li {
   margin: 0.5rem 0;
-  color: var(--muted-foreground);
+  color: #000000;
   display: list-item;
 }
 
-.markdown-content strong {
-  font-weight: 600;
-  color: var(--foreground);
+.dark .markdown-content li {
+  color: #ffffff;
+}
+
+.markdown-content strong,
+.markdown-content b {
+  font-weight: 700 !important;
+  color: #000000;
+}
+
+.dark .markdown-content strong,
+.dark .markdown-content b {
+  color: #ffffff;
+}
+
+.markdown-content p strong,
+.markdown-content p b,
+.markdown-content li strong,
+.markdown-content li b,
+.markdown-content h1 strong,
+.markdown-content h1 b,
+.markdown-content h2 strong,
+.markdown-content h2 b,
+.markdown-content h3 strong,
+.markdown-content h3 b,
+.markdown-content h4 strong,
+.markdown-content h4 b {
+  font-weight: 700 !important;
+  color: #000000;
+}
+
+.dark .markdown-content p strong,
+.dark .markdown-content p b,
+.dark .markdown-content li strong,
+.dark .markdown-content li b,
+.dark .markdown-content h1 strong,
+.dark .markdown-content h1 b,
+.dark .markdown-content h2 strong,
+.dark .markdown-content h2 b,
+.dark .markdown-content h3 strong,
+.dark .markdown-content h3 b,
+.dark .markdown-content h4 strong,
+.dark .markdown-content h4 b {
+  color: #ffffff;
 }
 
 .markdown-content code {
@@ -192,12 +242,33 @@ body {
   border-radius: 0;
 }
 
+/* react-syntax-highlighter 스타일 오버라이드 */
+.markdown-content pre[class*="language-"] {
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.markdown-content pre[class*="language-"] code {
+  font-family: "Courier New", "Consolas", "Monaco", monospace !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.markdown-content pre[class*="language-"] code span {
+  font-size: 1rem !important;
+}
+
 .markdown-content blockquote {
   border-left: 4px solid var(--primary);
   padding-left: 1rem;
   margin: 1rem 0;
   font-style: italic;
-  color: var(--muted-foreground);
+  color: #000000;
+}
+
+.dark .markdown-content blockquote {
+  color: #ffffff;
 }
 
 .markdown-content table {
@@ -220,7 +291,11 @@ body {
 }
 
 .markdown-content td {
-  color: var(--muted-foreground);
+  color: #000000;
+}
+
+.dark .markdown-content td {
+  color: #ffffff;
 }
 
 .markdown-content hr {

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Mail, Phone, MapPin } from "lucide-react";
+import { Github, Mail, Phone, MapPin, BookOpen } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -103,7 +104,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* 개발자 여정 */}
+        {/* 학습 노트 버튼 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,42 +112,56 @@ export default function Hero() {
           className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 card-shadow border border-border/50"
         >
           <div className="space-y-6">
-            <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-green-600 dark:text-green-400 text-sm">
-                  🚀
-                </span>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center flex-shrink-0">
+                <BookOpen className="w-5 h-5 text-green-600 dark:text-green-400" />
               </div>
-              <div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  개발자의 꿈을 시작하게 된 계기는 웹페이지를 만드는 것에 흥미를
-                  느끼게 되었고, 온라인 강의와 스터디를 통해 학습하며 다양한
-                  프로젝트들을 만들어보았습니다.
-                </p>
+              <h2 className="text-2xl font-bold">학습 노트</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link
+                href="/js"
+                className="group relative overflow-hidden bg-gradient-to-br from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/20 hover:border-yellow-500/40 rounded-xl p-6 transition-all duration-300"
+              >
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-yellow-500/20 group-hover:bg-yellow-500/30 flex items-center justify-center transition-colors">
+                    <span className="text-2xl">📘</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">JS</h3>
+                  <p className="text-sm text-muted-foreground">
+                    JavaScript 학습 내용
+                  </p>
+                </div>
+              </Link>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Express.js와 MySQL 기반 REST API 서버 구축 경험을 바탕으로,
-                  <strong className="text-foreground"> SocialSpace</strong>{" "}
-                  프로젝트를 통해 Next.js와 Express.js를 활용한 풀스택 개발
-                  역량을 확장했습니다.
-                </p>
+              <Link
+                href="/react"
+                className="group relative overflow-hidden bg-gradient-to-br from-blue-500/10 to-cyan-500/10 hover:from-blue-500/20 hover:to-cyan-500/20 border border-blue-500/20 hover:border-blue-500/40 rounded-xl p-6 transition-all duration-300"
+              >
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-blue-500/20 group-hover:bg-blue-500/30 flex items-center justify-center transition-colors">
+                    <span className="text-2xl">⚛️</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">React</h3>
+                  <p className="text-sm text-muted-foreground">
+                    React 학습 내용
+                  </p>
+                </div>
+              </Link>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  초기 로딩 속도 개선을 위해 SSR을 도입하고, SWR 캐싱과 낙관적
-                  UI 업데이트로 사용자 경험을 개선했으며, Socket.IO를 활용한
-                  실시간 채팅 시스템을 구현했습니다. PostgreSQL 기반
-                  데이터베이스 설계와 N+1 쿼리 최적화를 통해 성능 문제를
-                  해결하며 실제 비즈니스 요구사항을 만족시키는 시스템을
-                  구축했습니다.
-                </p>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  빠르게 변화하는 웹 기술 트렌드에 적응하며 지속적인 학습을 통해
-                  문제를 해결하고 비즈니스 가치를 창출하는 개발자가 되고자
-                  합니다.{" "}
-                  <span className="text-green-600 dark:text-green-400">🙌</span>
-                </p>
-              </div>
+              <Link
+                href="/next"
+                className="group relative overflow-hidden bg-gradient-to-br from-gray-500/10 to-slate-500/10 hover:from-gray-500/20 hover:to-slate-500/20 border border-gray-500/20 hover:border-gray-500/40 rounded-xl p-6 transition-all duration-300 opacity-60 cursor-not-allowed"
+                onClick={(e) => e.preventDefault()}
+              >
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-gray-500/20 flex items-center justify-center">
+                    <span className="text-2xl">▲</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">Next</h3>
+                  <p className="text-sm text-muted-foreground">준비중</p>
+                </div>
+              </Link>
             </div>
           </div>
         </motion.div>
