@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Mail, Phone, MapPin, BookOpen } from "lucide-react";
+import { Github, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
@@ -100,68 +100,6 @@ export default function Hero() {
                   sangwoo0560@gmail.com
                 </a>
               </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* 학습 노트 버튼 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.6 }}
-          className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 card-shadow border border-border/50"
-        >
-          <div className="space-y-6">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center flex-shrink-0">
-                <BookOpen className="w-5 h-5 text-green-600 dark:text-green-400" />
-              </div>
-              <h2 className="text-2xl font-bold">학습 노트</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link
-                href="/js"
-                className="group relative overflow-hidden bg-gradient-to-br from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/20 hover:border-yellow-500/40 rounded-xl p-6 transition-all duration-300"
-              >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-yellow-500/20 group-hover:bg-yellow-500/30 flex items-center justify-center transition-colors">
-                    <span className="text-2xl">📘</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">JS</h3>
-                  <p className="text-sm text-muted-foreground">
-                    JavaScript 학습 내용
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/react"
-                className="group relative overflow-hidden bg-gradient-to-br from-blue-500/10 to-cyan-500/10 hover:from-blue-500/20 hover:to-cyan-500/20 border border-blue-500/20 hover:border-blue-500/40 rounded-xl p-6 transition-all duration-300"
-              >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-blue-500/20 group-hover:bg-blue-500/30 flex items-center justify-center transition-colors">
-                    <span className="text-2xl">⚛️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">React</h3>
-                  <p className="text-sm text-muted-foreground">
-                    React 학습 내용
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/next"
-                className="group relative overflow-hidden bg-gradient-to-br from-gray-500/10 to-slate-500/10 hover:from-gray-500/20 hover:to-slate-500/20 border border-gray-500/20 hover:border-gray-500/40 rounded-xl p-6 transition-all duration-300 opacity-60 cursor-not-allowed"
-                onClick={(e) => e.preventDefault()}
-              >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-gray-500/20 flex items-center justify-center">
-                    <span className="text-2xl">▲</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">Next</h3>
-                  <p className="text-sm text-muted-foreground">준비중</p>
-                </div>
-              </Link>
             </div>
           </div>
         </motion.div>

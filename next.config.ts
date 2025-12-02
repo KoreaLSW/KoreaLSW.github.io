@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // 현재 디렉토리를 루트로 지정
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;

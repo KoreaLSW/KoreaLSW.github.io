@@ -65,20 +65,8 @@ export default function SocialspacePage() {
               Socialspace
             </h1>
             <p className="text-xl text-muted-foreground mb-6">
-              사용자들이 일기를 공유하고 소통할 수 있는 웹 애플리케이션
+              프로젝트 설명과 문제점, 해결방법을 정리한 노트입니다.
             </p>
-
-            {/* 기술 스택 */}
-            <div className="flex flex-wrap gap-2">
-              {["TypeScript", "React", "Express", "MySQL"].map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* 프론트엔드/백엔드 선택 버튼 - 항상 표시 */}
@@ -125,7 +113,7 @@ export default function SocialspacePage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-2">백엔드</h3>
                 <p className="text-muted-foreground mb-4">
-                  Express, MySQL을 사용한 서버 개발
+                  Express, PostgreSQL을 사용한 서버 개발
                 </p>
                 <div className="flex items-center justify-center gap-2 text-primary group-hover:underline">
                   <ExternalLink className="w-4 h-4" />

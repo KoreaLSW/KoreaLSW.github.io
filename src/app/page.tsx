@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
+import StudyNote from "@/components/StudyNote";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,11 +16,14 @@ export default function Home() {
       <div id="projects">
         <Projects />
       </div>
-      <div id="experience">
-        <Experience />
+      <div id="study-note">
+        <StudyNote />
       </div>
       <div id="skills">
         <Skills />
+      </div>
+      <div id="experience">
+        <Experience />
       </div>
       <Footer />
     </main>

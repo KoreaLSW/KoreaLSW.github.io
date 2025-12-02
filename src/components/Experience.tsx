@@ -113,6 +113,7 @@ const education = [
       "JS 기본문법부터 심화과정 수료",
       "TS 객체지향 프로그래밍 수료",
       "React 프론트앤드 강의 수료",
+      "NextJS 프론트앤드 강의 수료",
       "Node 백앤드 강의 수료",
     ],
     icon: GraduationCap,

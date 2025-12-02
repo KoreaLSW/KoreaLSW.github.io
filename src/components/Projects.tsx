@@ -34,10 +34,10 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            프로젝트
+            개인 프로젝트
           </h2>
           <p className="text-xl text-muted-foreground">
-            학습과 성장의 과정에서 만들어본 프로젝트들입니다
+            학습한 내용을 바탕으로 만들어본 개인프로젝트입니다.
           </p>
         </motion.div>
 
@@ -55,14 +55,11 @@ export default function Projects() {
               <div className="relative h-64 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20">
                 {project.id === 1 ? (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="grid grid-cols-2 gap-4 p-8">
-                      <div className="w-24 h-24 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
-                        <span className="text-4xl">🍎</span>
-                      </div>
-                      <div className="w-24 h-24 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl text-gray-400">📷</span>
-                      </div>
-                    </div>
+                    <img
+                      src="/images/SocialSpace_main.png"
+                      alt="Socialspace 프로젝트"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -129,12 +126,12 @@ export default function Projects() {
                       {expandedProjects[project.id] ? (
                         <>
                           <ChevronUp className="w-4 h-4" />
-                          상세 정보 접기
+                          프로젝트 내용 접기
                         </>
                       ) : (
                         <>
                           <ChevronDown className="w-4 h-4" />
-                          상세 정보 보기
+                          프로젝트 내용 보기
                         </>
                       )}
                     </button>
@@ -257,7 +254,7 @@ export default function Projects() {
                     className="flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors text-sm font-medium"
                   >
                     <Info className="w-4 h-4" />
-                    프로젝트 설명
+                    프로젝트 상세 설명
                   </Link>
 
                   <a
