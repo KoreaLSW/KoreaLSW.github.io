@@ -18,16 +18,6 @@ export default function Hero() {
       {/* 메인 콘텐츠 */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          {/* 프로필 이미지 */}
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl"
-          >
-            이상우
-          </motion.div>
-
           {/* 이름과 타이틀 */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -35,17 +25,25 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
-            이상우
+            안녕하세요
+            <br />
           </motion.h1>
-
           <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="text-xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          >
+            한 기술에 머물지 않고 배움으로 넓혀가는 개발자, 이상우입니다.
+          </motion.h2>
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
             className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-8"
           >
             Frontend Developer
-          </motion.h2>
+          </motion.h3>
         </div>
 
         {/* 소개 텍스트 */}
